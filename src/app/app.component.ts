@@ -34,18 +34,17 @@ export class AppComponent {
     console.log(userLang)
 
     //timestamp
-    console.log(Data.now())
   }
 
   duplicateArray(){
     var arr = [1,2,3,'some',1,5,4,4,3,3,3];
 
-    var count = data => 
-        data.reduce((a,b) =>({ ...a,
-            [b] : (a[b] || 0) + 1
-    }),{})
+//     var count = data => 
+//         data.reduce((a,b) =>({ ...a,
+//             [b] : (a[b] || 0) + 1
+//     }),{})
 
-console.log(count(arr))
+// console.log(count(arr))
   }
 
   objLPMethod(){
