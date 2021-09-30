@@ -1,0 +1,18 @@
+<h1>Componenet Interaction</h1>
+<p>parent works!</p>
+<button type="button" (click)="userLoggedInButton(true)">LogIn</button>
+<button type="button" (click)="userLoggedInButton(false)">LogOut</button>
+<h2>{{msg}}</h2>
+<input style="margin-bottom:10px" type="text" (keyup)="onKey($event)" />
+
+
+<button type="button" (click)="teacherWish('Good Morning');getDummyData()">Good Morning</button>
+<button type="button" (click)="teacherWish('Well Done!')">Well Done!</button>
+<button type="button" (click)="toogleChild()">Destroy child!</button>
+
+<h1>{{changeDetect | uppercase}}</h1>
+<br>
+<app-child *ngIf="showChild" (childInfo)="msg=$event" [fromparent]="dataFromParent" [loggedIn]="userLoggedIn">
+    <p>single slot content projection and ng content</p>
+    <p question >Multi slot content projection and ng content</p>
+</app-child>

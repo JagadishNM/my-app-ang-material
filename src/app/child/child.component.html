@@ -1,0 +1,14 @@
+<p>{{message}}</p>
+<h2>child works! {{fromparent}}</h2>
+<button type="button" (click)="fireEvent()">Click Child</button>
+<button type="button" (click)="tapOp()">Tap</button>
+<div style="margin: 10px;">
+    <label>Switch Map</label>
+    <input type="text" placeholder="Search..." [formControl]='searchEngine' />
+    <label>&nbsp;&nbsp;{{counter}}</label>
+</div>
+<ul>
+    <li style="display: block !important;" *ngFor="let data of receivedData">{{data}}</li>
+</ul>
+<ng-content></ng-content>
+<ng-content select="[question]"></ng-content>

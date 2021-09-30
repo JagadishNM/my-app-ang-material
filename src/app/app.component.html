@@ -1,0 +1,31 @@
+
+<div style="margin: 20px;">
+  <h1>Angular Elements and Componenets</h1>
+  <input #input value="Message">
+    <button (click)="popup.showAsComponent(input.value)">Show as component</button>
+    <button (click)="popup.showAsElement(input.value)">Show as element</button>
+</div>
+
+<div style="margin: 20px;">
+  <button routerLink="/parent">Parent</button>
+  <button routerLink="/asyncPipe">Async Pipe</button>
+  <button routerLink="/articles">Articles</button>
+  <button routerLink="/orders">Orders</button>
+  <button routerLink="">Home</button>
+</div>
+
+<div style="margin: 20px;">
+  <router-outlet></router-outlet>
+</div>
+<!-- <div class="wrapper">
+  <h1>Javascript</h1>
+
+  <p>Object Loop</p>
+  <span><em>Result</em>:&nbsp;{{oblp}}</span>
+
+  <p>Async Method</p>
+  <span><em>Result</em>:&nbsp;{{asnk}}</span>
+</div> -->
+
+
+

@@ -1,0 +1,15 @@
+<div style="margin: 15px;">
+    <label style="margin-right: 10px;">Search</label>
+    <input type="text" (keyup)="onSearch($event)" />
+    <br>
+
+    <ul>
+        <li *ngFor="let data of showData$ | async" style="display: flex;">
+            <div><img [src]='data.volumeInfo.imageLinks.thumbnail' style="width: 40px;height: auto;" /></div>
+            <div>
+                <p>{{data.volumeInfo.title}}</p>
+            </div>
+        </li>
+    </ul>
+
+</div>
