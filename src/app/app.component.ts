@@ -17,7 +17,6 @@ export class AppComponent {
 
   oblp = '';
   asnk:any;
-
   constructor(injector: Injector, public popup: PopupService) {
     // Convert `PopupComponent` to a custom element.
     const PopupElement = createCustomElement(CustomElementsComponent, {injector});
@@ -28,7 +27,7 @@ export class AppComponent {
   ngOnInit () {
     this.objLPMethod();
     this.asnkMethod();
-
+    this.duplicateArray();
     //get browser language
     let userLang = navigator.language
     console.log(userLang)
@@ -39,12 +38,12 @@ export class AppComponent {
   duplicateArray(){
     var arr = [1,2,3,'some',1,5,4,4,3,3,3];
 
-//     var count = data => 
-//         data.reduce((a,b) =>({ ...a,
-//             [b] : (a[b] || 0) + 1
-//     }),{})
+    var count = data => 
+        data.reduce((a,b) =>({ ...a,
+            [b] : (a[b] || 0) + 1
+    }),{})
 
-// console.log(count(arr))
+console.log('duplicateArray =>',count(arr))
   }
 
   objLPMethod(){
